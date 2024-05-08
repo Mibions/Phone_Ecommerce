@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CHITIETDONMUA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MACHITIETDONMUA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MADONMUA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MACHITIETSANPHAM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SOLUONG" Type="Int32" />
+    <Property Name="KIEMTRATHANHTOAN" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="CHITIETSANPHAM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MACHITIETSANPHAM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MALOAI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TENSANPHAM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GIA" Type="Double" />
+    <Property Name="MAUSAC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MOTASANPHAM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HINHANH" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MANCC" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DANHGIA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MADANHGIA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MACHITIETSANPHAM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MAKHACHHANG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DIEMDANHGIA" Type="Double" />
+    <Property Name="BINHLUAN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DONMUA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MADONMUA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MAKHACHHANG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NGAYDATHANG" Type="DateTime" Precision="3" />
+    <Property Name="TRANGTHAI" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="HINHTHUC" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="GIOHANG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MAGIOHANG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MAKHACHHANG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MACHITIETSANPHAM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SOLUONG" Type="Int32" />
+    <Property Name="THANHTIEN" Type="Double" />
+  </EntityType>
+  <EntityType Name="KHACHHANG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MAKHACHHANG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MAPERSON" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="KHO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MAKHO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TENKHO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DIACHIKHO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SODIENTHOAIKHO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="KHO_CHITIETSANPHAM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MAKHO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MACHITIETSANPHAM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SOLUONG" Type="Int32" />
+  </EntityType>
+  <EntityType Name="LOAISANPHAM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MALOAI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TENLOAI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NHACUNGCAP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MANCC" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TENNCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DIACHI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SODIENTHOAI" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MANHANVIEN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MAPERSON" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CHUCVU" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PERSON">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MAPERSON" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SODIENTHOAI" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DIACHI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GIOITINH" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="QUANGCAO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MAQUANGCAO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TENQUANGCAO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HINHANH" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TAIKHOANKHACHHANG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENTAIKHOAN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MATKHAU" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="MAKHACHHANG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TAIKHOANNHANVIEN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENTAIKHOAN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MATKHAU" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="MANHANVIEN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="THANHTOANDONMUA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MATHANHTOANDONMUA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MADONMUA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NGAYTHANHTOAN" Type="DateTime" Precision="3" />
+    <Property Name="TONGTIEN" Type="Double" />
+  </EntityType>
+  <EntityType Name="VITRICUAHANG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MAVITRICUAHANG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TENVITRICUAHANG" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DIACHICUAHANG" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CHITIETDONMUAs" EntityType="Self.CHITIETDONMUA" />
+    <EntitySet Name="CHITIETSANPHAMs" EntityType="Self.CHITIETSANPHAM" />
+    <EntitySet Name="DANHGIAs" EntityType="Self.DANHGIA" />
+    <EntitySet Name="DONMUAs" EntityType="Self.DONMUA" />
+    <EntitySet Name="GIOHANGs" EntityType="Self.GIOHANG" />
+    <EntitySet Name="KHACHHANGs" EntityType="Self.KHACHHANG" />
+    <EntitySet Name="KHOes" EntityType="Self.KHO" />
+    <EntitySet Name="KHO_CHITIETSANPHAM" EntityType="Self.KHO_CHITIETSANPHAM" />
+    <EntitySet Name="LOAISANPHAMs" EntityType="Self.LOAISANPHAM" />
+    <EntitySet Name="NHACUNGCAPs" EntityType="Self.NHACUNGCAP" />
+    <EntitySet Name="NHANVIENs" EntityType="Self.NHANVIEN" />
+    <EntitySet Name="People" EntityType="Self.PERSON" />
+    <EntitySet Name="QUANGCAOs" EntityType="Self.QUANGCAO" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="TAIKHOANKHACHHANGs" EntityType="Self.TAIKHOANKHACHHANG" />
+    <EntitySet Name="TAIKHOANNHANVIENs" EntityType="Self.TAIKHOANNHANVIEN" />
+    <EntitySet Name="THANHTOANDONMUAs" EntityType="Self.THANHTOANDONMUA" />
+    <EntitySet Name="VITRICUAHANGs" EntityType="Self.VITRICUAHANG" />
+    <FunctionImport Name="PROC_GET_DATA_CHI_TIET_DON_MUA" ReturnType="Collection(QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.PROC_GET_DATA_CHI_TIET_DON_MUA_Result)">
+      <Parameter Name="MAKHACHHANG" Mode="In" Type="String" />
+      <Parameter Name="MADONMUA" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_GET_DATA_CHI_TIET_DON_MUA_CHUA_THANH_TOAN" ReturnType="Collection(QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.PROC_GET_DATA_CHI_TIET_DON_MUA_CHUA_THANH_TOAN_Result)">
+      <Parameter Name="MAKHACHHANG" Mode="In" Type="String" />
+      <Parameter Name="MADONMUA" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_GET_DATA_CHI_TIET_DON_MUA_DA_THANH_TOAN" ReturnType="Collection(QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.PROC_GET_DATA_CHI_TIET_DON_MUA_DA_THANH_TOAN_Result)">
+      <Parameter Name="MAKHACHHANG" Mode="In" Type="String" />
+      <Parameter Name="MADONMUA" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PROC_GET_DATA_DON_MUA" ReturnType="Collection(String)">
+      <Parameter Name="MAKHACHHANG" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="USP_CheckLogin_Cus" ReturnType="Collection(QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.USP_CheckLogin_Cus_Result)">
+      <Parameter Name="user" Mode="In" Type="String" />
+      <Parameter Name="Pass" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_CheckLogin_Emp" ReturnType="Collection(QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.USP_CheckLogin_Emp_Result)">
+      <Parameter Name="user" Mode="In" Type="String" />
+      <Parameter Name="Pass" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_LoadCart" ReturnType="Collection(QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.USP_LoadCart_Result)">
+      <Parameter Name="MaKH" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="PROC_GET_DATA_CHI_TIET_DON_MUA_Result">
+    <Property Type="String" Name="TENSANPHAM" Nullable="true" />
+    <Property Type="Double" Name="GIA" Nullable="true" />
+    <Property Type="String" Name="MAUSAC" Nullable="true" />
+    <Property Type="String" Name="HINHANH" Nullable="true" />
+    <Property Type="Int32" Name="SOLUONG" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="PROC_GET_DATA_CHI_TIET_DON_MUA_CHUA_THANH_TOAN_Result">
+    <Property Type="String" Name="TENSANPHAM" Nullable="true" />
+    <Property Type="Double" Name="GIA" Nullable="true" />
+    <Property Type="String" Name="MAUSAC" Nullable="true" />
+    <Property Type="String" Name="HINHANH" Nullable="true" />
+    <Property Type="Int32" Name="SOLUONG" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="PROC_GET_DATA_CHI_TIET_DON_MUA_DA_THANH_TOAN_Result">
+    <Property Type="String" Name="TENSANPHAM" Nullable="true" />
+    <Property Type="Double" Name="GIA" Nullable="true" />
+    <Property Type="String" Name="MAUSAC" Nullable="true" />
+    <Property Type="String" Name="HINHANH" Nullable="true" />
+    <Property Type="Int32" Name="SOLUONG" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="USP_CheckLogin_Cus_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="TENTAIKHOAN" Nullable="true" />
+    <Property Type="String" Name="MATKHAU" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="MAKHACHHANG" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="USP_CheckLogin_Emp_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="TENTAIKHOAN" Nullable="true" />
+    <Property Type="String" Name="MATKHAU" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="MANHANVIEN" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="USP_LoadCart_Result">
+    <Property Type="String" Name="MAGIOHANG" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="TENSANPHAM" Nullable="true" />
+    <Property Type="Double" Name="GIA" Nullable="true" />
+    <Property Type="String" Name="MAUSAC" Nullable="true" />
+    <Property Type="Int32" Name="SOLUONG" Nullable="true" />
+    <Property Type="String" Name="MOTASANPHAM" Nullable="true" />
+    <Property Type="String" Name="HINHANH" Nullable="true" />
+    <Property Type="Double" Name="THANHTIEN" Nullable="true" />
+  </ComplexType>
+</Schema>

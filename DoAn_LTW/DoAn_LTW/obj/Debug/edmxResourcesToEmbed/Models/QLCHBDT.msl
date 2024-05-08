@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModelStoreContainer" CdmEntityContainer="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWEntities">
+    <EntitySetMapping Name="CHITIETDONMUAs">
+      <EntityTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.CHITIETDONMUA">
+        <MappingFragment StoreEntitySet="CHITIETDONMUA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MACHITIETDONMUA" ColumnName="MACHITIETDONMUA" />
+          <ScalarProperty Name="MADONMUA" ColumnName="MADONMUA" />
+          <ScalarProperty Name="MACHITIETSANPHAM" ColumnName="MACHITIETSANPHAM" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+          <ScalarProperty Name="KIEMTRATHANHTOAN" ColumnName="KIEMTRATHANHTOAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHITIETSANPHAMs">
+      <EntityTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.CHITIETSANPHAM">
+        <MappingFragment StoreEntitySet="CHITIETSANPHAM">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MACHITIETSANPHAM" ColumnName="MACHITIETSANPHAM" />
+          <ScalarProperty Name="MALOAI" ColumnName="MALOAI" />
+          <ScalarProperty Name="TENSANPHAM" ColumnName="TENSANPHAM" />
+          <ScalarProperty Name="GIA" ColumnName="GIA" />
+          <ScalarProperty Name="MAUSAC" ColumnName="MAUSAC" />
+          <ScalarProperty Name="MOTASANPHAM" ColumnName="MOTASANPHAM" />
+          <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
+          <ScalarProperty Name="MANCC" ColumnName="MANCC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DANHGIAs">
+      <EntityTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.DANHGIA">
+        <MappingFragment StoreEntitySet="DANHGIA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MADANHGIA" ColumnName="MADANHGIA" />
+          <ScalarProperty Name="MACHITIETSANPHAM" ColumnName="MACHITIETSANPHAM" />
+          <ScalarProperty Name="MAKHACHHANG" ColumnName="MAKHACHHANG" />
+          <ScalarProperty Name="DIEMDANHGIA" ColumnName="DIEMDANHGIA" />
+          <ScalarProperty Name="BINHLUAN" ColumnName="BINHLUAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DONMUAs">
+      <EntityTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.DONMUA">
+        <MappingFragment StoreEntitySet="DONMUA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MADONMUA" ColumnName="MADONMUA" />
+          <ScalarProperty Name="MAKHACHHANG" ColumnName="MAKHACHHANG" />
+          <ScalarProperty Name="NGAYDATHANG" ColumnName="NGAYDATHANG" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+          <ScalarProperty Name="HINHTHUC" ColumnName="HINHTHUC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GIOHANGs">
+      <EntityTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.GIOHANG">
+        <MappingFragment StoreEntitySet="GIOHANG">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MAGIOHANG" ColumnName="MAGIOHANG" />
+          <ScalarProperty Name="MAKHACHHANG" ColumnName="MAKHACHHANG" />
+          <ScalarProperty Name="MACHITIETSANPHAM" ColumnName="MACHITIETSANPHAM" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+          <ScalarProperty Name="THANHTIEN" ColumnName="THANHTIEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KHACHHANGs">
+      <EntityTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.KHACHHANG">
+        <MappingFragment StoreEntitySet="KHACHHANG">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MAKHACHHANG" ColumnName="MAKHACHHANG" />
+          <ScalarProperty Name="MAPERSON" ColumnName="MAPERSON" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KHOes">
+      <EntityTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.KHO">
+        <MappingFragment StoreEntitySet="KHO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MAKHO" ColumnName="MAKHO" />
+          <ScalarProperty Name="TENKHO" ColumnName="TENKHO" />
+          <ScalarProperty Name="DIACHIKHO" ColumnName="DIACHIKHO" />
+          <ScalarProperty Name="SODIENTHOAIKHO" ColumnName="SODIENTHOAIKHO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KHO_CHITIETSANPHAM">
+      <EntityTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.KHO_CHITIETSANPHAM">
+        <MappingFragment StoreEntitySet="KHO_CHITIETSANPHAM">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MAKHO" ColumnName="MAKHO" />
+          <ScalarProperty Name="MACHITIETSANPHAM" ColumnName="MACHITIETSANPHAM" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOAISANPHAMs">
+      <EntityTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.LOAISANPHAM">
+        <MappingFragment StoreEntitySet="LOAISANPHAM">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MALOAI" ColumnName="MALOAI" />
+          <ScalarProperty Name="TENLOAI" ColumnName="TENLOAI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHACUNGCAPs">
+      <EntityTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.NHACUNGCAP">
+        <MappingFragment StoreEntitySet="NHACUNGCAP">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MANCC" ColumnName="MANCC" />
+          <ScalarProperty Name="TENNCC" ColumnName="TENNCC" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="SODIENTHOAI" ColumnName="SODIENTHOAI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHANVIENs">
+      <EntityTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.NHANVIEN">
+        <MappingFragment StoreEntitySet="NHANVIEN">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MANHANVIEN" ColumnName="MANHANVIEN" />
+          <ScalarProperty Name="MAPERSON" ColumnName="MAPERSON" />
+          <ScalarProperty Name="CHUCVU" ColumnName="CHUCVU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.PERSON">
+        <MappingFragment StoreEntitySet="PERSON">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MAPERSON" ColumnName="MAPERSON" />
+          <ScalarProperty Name="TEN" ColumnName="TEN" />
+          <ScalarProperty Name="SODIENTHOAI" ColumnName="SODIENTHOAI" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QUANGCAOs">
+      <EntityTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.QUANGCAO">
+        <MappingFragment StoreEntitySet="QUANGCAO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MAQUANGCAO" ColumnName="MAQUANGCAO" />
+          <ScalarProperty Name="TENQUANGCAO" ColumnName="TENQUANGCAO" />
+          <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAIKHOANKHACHHANGs">
+      <EntityTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.TAIKHOANKHACHHANG">
+        <MappingFragment StoreEntitySet="TAIKHOANKHACHHANG">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TENTAIKHOAN" ColumnName="TENTAIKHOAN" />
+          <ScalarProperty Name="MATKHAU" ColumnName="MATKHAU" />
+          <ScalarProperty Name="MAKHACHHANG" ColumnName="MAKHACHHANG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAIKHOANNHANVIENs">
+      <EntityTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.TAIKHOANNHANVIEN">
+        <MappingFragment StoreEntitySet="TAIKHOANNHANVIEN">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TENTAIKHOAN" ColumnName="TENTAIKHOAN" />
+          <ScalarProperty Name="MATKHAU" ColumnName="MATKHAU" />
+          <ScalarProperty Name="MANHANVIEN" ColumnName="MANHANVIEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="THANHTOANDONMUAs">
+      <EntityTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.THANHTOANDONMUA">
+        <MappingFragment StoreEntitySet="THANHTOANDONMUA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MATHANHTOANDONMUA" ColumnName="MATHANHTOANDONMUA" />
+          <ScalarProperty Name="MADONMUA" ColumnName="MADONMUA" />
+          <ScalarProperty Name="NGAYTHANHTOAN" ColumnName="NGAYTHANHTOAN" />
+          <ScalarProperty Name="TONGTIEN" ColumnName="TONGTIEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VITRICUAHANGs">
+      <EntityTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.VITRICUAHANG">
+        <MappingFragment StoreEntitySet="VITRICUAHANG">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MAVITRICUAHANG" ColumnName="MAVITRICUAHANG" />
+          <ScalarProperty Name="TENVITRICUAHANG" ColumnName="TENVITRICUAHANG" />
+          <ScalarProperty Name="DIACHICUAHANG" ColumnName="DIACHICUAHANG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="PROC_GET_DATA_CHI_TIET_DON_MUA" FunctionName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.Store.PROC_GET_DATA_CHI_TIET_DON_MUA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.PROC_GET_DATA_CHI_TIET_DON_MUA_Result">
+          <ScalarProperty Name="TENSANPHAM" ColumnName="TENSANPHAM" />
+          <ScalarProperty Name="GIA" ColumnName="GIA" />
+          <ScalarProperty Name="MAUSAC" ColumnName="MAUSAC" />
+          <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_GET_DATA_CHI_TIET_DON_MUA_CHUA_THANH_TOAN" FunctionName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.Store.PROC_GET_DATA_CHI_TIET_DON_MUA_CHUA_THANH_TOAN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.PROC_GET_DATA_CHI_TIET_DON_MUA_CHUA_THANH_TOAN_Result">
+          <ScalarProperty Name="TENSANPHAM" ColumnName="TENSANPHAM" />
+          <ScalarProperty Name="GIA" ColumnName="GIA" />
+          <ScalarProperty Name="MAUSAC" ColumnName="MAUSAC" />
+          <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_GET_DATA_CHI_TIET_DON_MUA_DA_THANH_TOAN" FunctionName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.Store.PROC_GET_DATA_CHI_TIET_DON_MUA_DA_THANH_TOAN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.PROC_GET_DATA_CHI_TIET_DON_MUA_DA_THANH_TOAN_Result">
+          <ScalarProperty Name="TENSANPHAM" ColumnName="TENSANPHAM" />
+          <ScalarProperty Name="GIA" ColumnName="GIA" />
+          <ScalarProperty Name="MAUSAC" ColumnName="MAUSAC" />
+          <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_GET_DATA_DON_MUA" FunctionName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.Store.PROC_GET_DATA_DON_MUA" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="USP_CheckLogin_Cus" FunctionName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.Store.USP_CheckLogin_Cus">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.USP_CheckLogin_Cus_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TENTAIKHOAN" ColumnName="TENTAIKHOAN" />
+          <ScalarProperty Name="MATKHAU" ColumnName="MATKHAU" />
+          <ScalarProperty Name="MAKHACHHANG" ColumnName="MAKHACHHANG" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_CheckLogin_Emp" FunctionName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.Store.USP_CheckLogin_Emp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.USP_CheckLogin_Emp_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TENTAIKHOAN" ColumnName="TENTAIKHOAN" />
+          <ScalarProperty Name="MATKHAU" ColumnName="MATKHAU" />
+          <ScalarProperty Name="MANHANVIEN" ColumnName="MANHANVIEN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_LoadCart" FunctionName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.Store.USP_LoadCart">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.USP_LoadCart_Result">
+          <ScalarProperty Name="MAGIOHANG" ColumnName="MAGIOHANG" />
+          <ScalarProperty Name="TENSANPHAM" ColumnName="TENSANPHAM" />
+          <ScalarProperty Name="GIA" ColumnName="GIA" />
+          <ScalarProperty Name="MAUSAC" ColumnName="MAUSAC" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+          <ScalarProperty Name="MOTASANPHAM" ColumnName="MOTASANPHAM" />
+          <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
+          <ScalarProperty Name="THANHTIEN" ColumnName="THANHTIEN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

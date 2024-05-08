@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CHITIETDONMUA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MACHITIETDONMUA" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MADONMUA" Type="varchar" MaxLength="10" />
+    <Property Name="MACHITIETSANPHAM" Type="varchar" MaxLength="10" />
+    <Property Name="SOLUONG" Type="int" />
+    <Property Name="KIEMTRATHANHTOAN" Type="bit" />
+  </EntityType>
+  <EntityType Name="CHITIETSANPHAM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MACHITIETSANPHAM" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MALOAI" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TENSANPHAM" Type="nvarchar(max)" />
+    <Property Name="GIA" Type="float" />
+    <Property Name="MAUSAC" Type="nvarchar(max)" />
+    <Property Name="MOTASANPHAM" Type="nvarchar(max)" />
+    <Property Name="HINHANH" Type="varchar(max)" />
+    <Property Name="MANCC" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="DANHGIA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MADANHGIA" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MACHITIETSANPHAM" Type="varchar" MaxLength="10" />
+    <Property Name="MAKHACHHANG" Type="varchar" MaxLength="10" />
+    <Property Name="DIEMDANHGIA" Type="float" />
+    <Property Name="BINHLUAN" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="DONMUA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MADONMUA" Type="varchar" MaxLength="10" />
+    <Property Name="MAKHACHHANG" Type="varchar" MaxLength="10" />
+    <Property Name="NGAYDATHANG" Type="datetime" />
+    <Property Name="TRANGTHAI" Type="nvarchar" MaxLength="20" />
+    <Property Name="HINHTHUC" Type="bit" />
+  </EntityType>
+  <EntityType Name="GIOHANG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MAGIOHANG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MAKHACHHANG" Type="varchar" MaxLength="10" />
+    <Property Name="MACHITIETSANPHAM" Type="varchar" MaxLength="10" />
+    <Property Name="SOLUONG" Type="int" />
+    <Property Name="THANHTIEN" Type="float" />
+  </EntityType>
+  <EntityType Name="KHACHHANG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MAKHACHHANG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MAPERSON" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="KHO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MAKHO" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TENKHO" Type="nvarchar(max)" />
+    <Property Name="DIACHIKHO" Type="nvarchar(max)" />
+    <Property Name="SODIENTHOAIKHO" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="KHO_CHITIETSANPHAM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MAKHO" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MACHITIETSANPHAM" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SOLUONG" Type="int" />
+  </EntityType>
+  <EntityType Name="LOAISANPHAM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MALOAI" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TENLOAI" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="NHACUNGCAP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MANCC" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TENNCC" Type="nvarchar(max)" />
+    <Property Name="DIACHI" Type="nvarchar(max)" />
+    <Property Name="SODIENTHOAI" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MANHANVIEN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MAPERSON" Type="varchar" MaxLength="10" />
+    <Property Name="CHUCVU" Type="nvarchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="PERSON">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MAPERSON" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TEN" Type="nvarchar(max)" />
+    <Property Name="SODIENTHOAI" Type="varchar" MaxLength="15" />
+    <Property Name="EMAIL" Type="varchar(max)" />
+    <Property Name="DIACHI" Type="nvarchar(max)" />
+    <Property Name="GIOITINH" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="QUANGCAO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MAQUANGCAO" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TENQUANGCAO" Type="nvarchar(max)" />
+    <Property Name="HINHANH" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TAIKHOANKHACHHANG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TENTAIKHOAN" Type="varchar(max)" />
+    <Property Name="MATKHAU" Type="varchar" MaxLength="255" />
+    <Property Name="MAKHACHHANG" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="TAIKHOANNHANVIEN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TENTAIKHOAN" Type="varchar(max)" />
+    <Property Name="MATKHAU" Type="varchar" MaxLength="255" />
+    <Property Name="MANHANVIEN" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="THANHTOANDONMUA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MATHANHTOANDONMUA" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MADONMUA" Type="varchar" MaxLength="10" />
+    <Property Name="NGAYTHANHTOAN" Type="datetime" />
+    <Property Name="TONGTIEN" Type="float" />
+  </EntityType>
+  <EntityType Name="VITRICUAHANG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MAVITRICUAHANG" Type="varchar" MaxLength="10" />
+    <Property Name="TENVITRICUAHANG" Type="nvarchar(max)" />
+    <Property Name="DIACHICUAHANG" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_CHITIETSANPHAM_CHITIETDONMUA' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_CHITIETSANPHAM_CHITIETDONMUA" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_CHITIETSANPHAM_DANHGIA' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_CHITIETSANPHAM_DANHGIA" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_CHITIETSANPHAM_GIOHANG' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_CHITIETSANPHAM_GIOHANG" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_DONMUA_CHITIETDONMUA' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_DONMUA_CHITIETDONMUA" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_DONMUA_THANHTOANDONMUA' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_DONMUA_THANHTOANDONMUA" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_KHACHHANG_DANHGIA' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_KHACHHANG_DANHGIA" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_KHACHHANG_DONMUA' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_KHACHHANG_DONMUA" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_KHACHHANG_GIOHANG' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_KHACHHANG_GIOHANG" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_KHACHHANG_TAIKHOANNHANVIEN' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_KHACHHANG_TAIKHOANNHANVIEN" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_KHO_CHITIETSANPHAM_CHITIETSANPHAM' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_KHO_CHITIETSANPHAM_CHITIETSANPHAM" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_KHO_CHITIETSANPHAM_KHO' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_KHO_CHITIETSANPHAM_KHO" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_LOAISANPHAM_CHITIETSANPHAM' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_LOAISANPHAM_CHITIETSANPHAM" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_NHACUNGCAP_CHITIETSANPHAM' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_NHACUNGCAP_CHITIETSANPHAM" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_NHANVIEN_TAIKHOANNHANVIEN' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_NHANVIEN_TAIKHOANNHANVIEN" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_PEROSON_KHACHHANG' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_PEROSON_KHACHHANG" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_PEROSON_NHANVIEN' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_PEROSON_NHANVIEN" />-->
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="PROC_GET_DATA_CHI_TIET_DON_MUA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MAKHACHHANG" Type="varchar" Mode="In" />
+    <Parameter Name="MADONMUA" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_GET_DATA_CHI_TIET_DON_MUA_CHUA_THANH_TOAN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MAKHACHHANG" Type="varchar" Mode="In" />
+    <Parameter Name="MADONMUA" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_GET_DATA_CHI_TIET_DON_MUA_DA_THANH_TOAN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MAKHACHHANG" Type="varchar" Mode="In" />
+    <Parameter Name="MADONMUA" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PROC_GET_DATA_DON_MUA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MAKHACHHANG" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="USP_CheckLogin_Cus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="user" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Pass" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USP_CheckLogin_Emp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="user" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Pass" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="USP_LoadCart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaKH" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="QUAN_LY_CUA_HANG_BAN_DIEN_THOAI_LTWModelStoreContainer">
+    <EntitySet Name="CHITIETDONMUA" EntityType="Self.CHITIETDONMUA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHITIETSANPHAM" EntityType="Self.CHITIETSANPHAM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DANHGIA" EntityType="Self.DANHGIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DONMUA" EntityType="Self.DONMUA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GIOHANG" EntityType="Self.GIOHANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KHO" EntityType="Self.KHO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KHO_CHITIETSANPHAM" EntityType="Self.KHO_CHITIETSANPHAM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOAISANPHAM" EntityType="Self.LOAISANPHAM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHACUNGCAP" EntityType="Self.NHACUNGCAP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PERSON" EntityType="Self.PERSON" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QUANGCAO" EntityType="Self.QUANGCAO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TAIKHOANKHACHHANG" EntityType="Self.TAIKHOANKHACHHANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TAIKHOANNHANVIEN" EntityType="Self.TAIKHOANNHANVIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="THANHTOANDONMUA" EntityType="Self.THANHTOANDONMUA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VITRICUAHANG" EntityType="Self.VITRICUAHANG" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
